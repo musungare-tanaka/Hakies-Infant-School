@@ -1,0 +1,3 @@
+import type { Metadata } from 'next'; import Gallery from '@/components/Gallery';
+export const metadata: Metadata = { title: 'Gallery', description: 'A gallery space for approved photographs from Hakies Infant School.' };
+export default function Page(){return <main id="main" className="interior"><section className="interior-hero"><div><span className="eyebrow">A little look around</span><h1>Moments at Hakies.</h1><p>Illustrated placeholders are shown until school-approved photographs are supplied. No pupil photographs are used here.</p></div></section><div className="gallery-wrap"><Gallery/></div></main>}

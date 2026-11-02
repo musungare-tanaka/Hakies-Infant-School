@@ -1,0 +1,3 @@
+import type { Metadata } from 'next'; import Link from 'next/link';
+export const metadata: Metadata = { title: 'News & Events', description: 'News and events from Hakies Infant School.' };
+export default function Page(){return <main id="main" className="interior"><section className="interior-hero"><div><span className="eyebrow">Notes from school</span><h1>News & little happenings.</h1><p>Announcements and events will be shared here when the school has confirmed the details.</p></div></section><div className="news-empty news-page-empty"><span className="news-icon">✉</span><div><h2>No announcements just yet.</h2><p>Check back soon for school news and upcoming events.</p></div></div></main>}
