@@ -1,19 +1,23 @@
-export const school = {
-  name: 'Hakies Infant School',
-  headline: 'A Happy Beginning to a Lifetime of Learning',
-  intro: 'Every school journey starts somewhere. We look forward to sharing more about our school, our community and the first steps in learning.',
-  contact: { address: '[School address to be confirmed]', phone: '[Telephone number to be confirmed]', email: '[School email to be confirmed]' },
-};
+import { school } from '@/data/school';
 
-export const nav = [
+const baseNav = [
   { label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Learning', href: '/learning' },
-  { label: 'School Life', href: '/school-life' }, { label: 'Admissions', href: '/admissions' }, { label: 'Contact', href: '/contact' },
+  { label: 'School Life', href: '/school-life' }, { label: 'Admissions', href: '/admissions' },
 ];
+const optionalNav = [
+  { label: 'Staff', href: '/staff', enabled: school.pages.staff },
+  { label: 'Facilities', href: '/facilities', enabled: school.pages.facilities },
+  { label: 'Downloads', href: '/downloads', enabled: school.pages.downloads },
+  { label: 'Testimonials', href: '/testimonials', enabled: school.pages.testimonials },
+  { label: 'Careers', href: '/careers', enabled: school.pages.careers },
+];
+export const nav = [...baseNav, ...optionalNav.filter((item) => item.enabled)];
 
 export const pageCopy: Record<string, { eyebrow: string; title: string; intro: string; sections: { title: string; text: string; label?: string }[] }> = {
-  about: { eyebrow: 'A little about us', title: 'A warm welcome to Hakies', intro: 'Get to know the people, purpose and story behind Hakies Infant School. The details on this page are ready to be completed with approved school information.', sections: [
-    { title: 'Our story', text: 'The story of Hakies Infant School will go here. Share when the school began, the community it serves and the moments that have shaped it.', label: 'School information needed' },
-    { title: 'Our purpose and values', text: 'Add the school’s approved mission and values here, in the words the school uses with children, families and staff.', label: 'For school approval' },
+  about: { eyebrow: 'Our purpose', title: 'Growing minds, shaping character.', intro: 'At Hakies, we believe every child can achieve their best, value others and thrive in a changing world.', sections: [
+    { title: 'Our vision', text: 'To raise joyful, independent learners who are prepared to lead, serve, and thrive in a changing world.' },
+    { title: 'Our mission', text: 'At Hakies Junior School, we cultivate a caring and purposeful learning community where children achieve their best, value others, think creatively, and grow in character every day.' },
+    { title: 'Our school motto', text: '“Growing Minds, Shaping Character.”' },
     { title: 'A welcome from the headteacher', text: 'A personal welcome from the headteacher can help families understand what matters most at Hakies. Add an approved message and profile when available.', label: 'Profile not yet supplied' },
   ]},
   learning: { eyebrow: 'Curiosity starts here', title: 'Learning, one discovery at a time', intro: 'Explore how learning is organised at Hakies. Class names, age groups and curriculum details need to be confirmed by the school before publication.', sections: [

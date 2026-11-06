@@ -1,0 +1,246 @@
+{
+  "date": "2026-11-06 Africa/Harare",
+  "url": "https://hakies.vercel.app",
+  "pages": [
+    {
+      "path": "/",
+      "title": "Hakies Infant School | A Happy Beginning to Learning",
+      "h1": [
+        "A Happy Beginning to a Lifetime of Learning"
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/about",
+      "title": "About Our School | Hakies Infant School",
+      "h1": [
+        "A warm welcome to Hakies"
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/learning",
+      "title": "learning | Hakies Infant School",
+      "h1": [
+        "Learning, one discovery at a time"
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/school-life",
+      "title": "school-life | Hakies Infant School",
+      "h1": [
+        "Little moments, big memories"
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/admissions",
+      "title": "Admissions | Hakies Infant School",
+      "h1": [
+        "Let’s start a conversation."
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/parents",
+      "title": "parents | Hakies Infant School",
+      "h1": [
+        "Helpful information for parents"
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/gallery",
+      "title": "Gallery | Hakies Infant School",
+      "h1": [
+        "Moments at Hakies."
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/news",
+      "title": "News & Events | Hakies Infant School",
+      "h1": [
+        "News & little happenings."
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    },
+    {
+      "path": "/contact",
+      "title": "Contact | Hakies Infant School",
+      "h1": [
+        "Say hello to Hakies."
+      ],
+      "links": [
+        "h✳Hakies INFANT SCHOOL",
+        "Home",
+        "About",
+        "Learning",
+        "School Life",
+        "Admissions",
+        "Contact",
+        "Enquire ↗"
+      ]
+    }
+  ],
+  "styles": {
+    "header": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgba(251, 248, 239, 0.96)",
+      "borderColor": "rgb(229, 231, 235) rgb(229, 231, 235) rgba(18, 79, 75, 0.08)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    ".site-header": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgba(251, 248, 239, 0.96)",
+      "borderColor": "rgb(229, 231, 235) rgb(229, 231, 235) rgba(18, 79, 75, 0.08)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    ".nav-wrap": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(229, 231, 235)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    "body": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgb(251, 248, 240)",
+      "borderColor": "rgb(229, 231, 235)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    ".button": {
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(18, 79, 75)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outlineColor": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    ".button-small": {
+      "color": "rgb(255, 255, 255)",
+      "backgroundColor": "rgb(18, 79, 75)",
+      "borderColor": "rgb(255, 255, 255)",
+      "outlineColor": "rgb(255, 255, 255)",
+      "boxShadow": "none"
+    },
+    ".button-light": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgb(244, 217, 120)",
+      "borderColor": "rgb(18, 79, 75)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    "a[aria-current=page]": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(229, 231, 235)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    ".hero": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgb(251, 248, 240)",
+      "borderColor": "rgb(229, 231, 235)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    ".hero h1": {
+      "color": "rgb(18, 79, 75)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(229, 231, 235)",
+      "outlineColor": "rgb(18, 79, 75)",
+      "boxShadow": "none"
+    },
+    ".hero-copy>p": {
+      "color": "rgb(83, 107, 102)",
+      "backgroundColor": "rgba(0, 0, 0, 0)",
+      "borderColor": "rgb(229, 231, 235)",
+      "outlineColor": "rgb(83, 107, 102)",
+      "boxShadow": "none"
+    },
+    ".footer": {
+      "color": "rgb(231, 238, 228)",
+      "backgroundColor": "rgb(12, 59, 57)",
+      "borderColor": "rgb(229, 231, 235)",
+      "outlineColor": "rgb(231, 238, 228)",
+      "boxShadow": "none"
+    }
+  },
+  "mobileMenu": "h\n✳\nHakies\nINFANT SCHOOL\nClose\n×\nHome\nAbout\nLearning\nSchool Life\nAdmissions\nContact\nEnquire\n↗"
+}

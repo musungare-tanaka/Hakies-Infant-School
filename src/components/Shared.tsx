@@ -1,0 +1,12 @@
+import Link from 'next/link';
+import { nav } from '@/lib/content';
+import { school } from '@/data/school';
+
+export function Footer() {
+  const socials = Object.entries(school.socials).filter((entry): entry is [string, string] => Boolean(entry[1]));
+  return <footer className="footer"><div className="footer-top"><div><Link href="/" className="brand brand-light"><span className="brand-mark" aria-hidden="true">h<span>✳</span></span><span>{school.name.replace(/ Infant School$/, '')} <small>INFANT SCHOOL</small></span></Link><p className="footer-tag">Growing Minds, Shaping Character.</p>{socials.length > 0 && <div className="social-links" aria-label="Social media">{socials.map(([network, url]) => <a key={network} href={url} target="_blank" rel="noreferrer">{network}</a>)}</div>}</div><div className="footer-col"><h3>Explore</h3><Link href="/about">About our school</Link><Link href="/learning">Learning</Link><Link href="/school-life">School life</Link><Link href="/gallery">Gallery</Link></div><div className="footer-col"><h3>For families</h3><Link href="/admissions">Admissions</Link><Link href="/parents">Parent information</Link><Link href="/calendar">Term Dates</Link><Link href="/news">News & events</Link><Link href="/contact">Contact</Link>{nav.filter((item) => ['staff', 'facilities', 'downloads', 'testimonials', 'careers'].some((slug) => item.href === `/${slug}`)).map((item) => <Link key={item.href} href={item.href}>{item.label}</Link>)}</div><div className="footer-col"><h3>Get in touch</h3><p>{school.contact.address.value ?? school.contact.address.placeholder}</p><p>{school.contact.phone.value ?? school.contact.phone.placeholder}</p><p>{school.contact.email.value ?? school.contact.email.placeholder}</p></div></div><div className="footer-bottom"><span>© {new Date().getFullYear()} {school.name}</span><span>Last updated: {school.lastUpdated.value ?? school.lastUpdated.placeholder}</span></div></footer>;
+}
+
+export function LastUpdated() { return <p className="last-updated">Last updated: {school.lastUpdated.value ?? school.lastUpdated.placeholder}</p>; }
+
+export function Breadcrumbs({ items }: { items: { label: string; href?: string }[] }) { return <nav className="breadcrumbs" aria-label="Breadcrumb"><ol><li><Link href="/">Home</Link></li>{items.map((item) => <li key={item.label}>{item.href ? <Link href={item.href}>{item.label}</Link> : <span aria-current="page">{item.label}</span>}</li>)}</ol></nav>; }
