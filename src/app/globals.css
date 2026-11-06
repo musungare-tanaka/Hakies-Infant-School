@@ -42,7 +42,7 @@ h1,h2,h3,.hero h1,.interior-hero h1,.brand,.brand:not(.brand-light){color:var(--
 .button:hover{background:var(--maroon-dark);box-shadow:0 8px 18px #800f3533}
 .button-light{background:var(--yellow);color:var(--maroon)}
 .button-light:hover{background:#ffda68;color:var(--maroon)}
-a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--yellow);outline-offset:4px}
+a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--maroon);outline-offset:4px}
 .site-header a:focus-visible,.site-header button:focus-visible{outline-color:var(--yellow)}
 .hero,.classes,.gallery-preview,.interior,.interior-body{background:var(--ivory)}
 .welcome,.day-section,.news-section,.quick-links,.breadcrumbs,.form-panel,.class-card,.class-empty,.day-empty{background:#fff}
@@ -56,13 +56,16 @@ body p,body li,body dd,body dt,body address,.class-card p,.hero-copy>p,.interior
 .form-error{color:#991b1b;background:#fef2f2;border:1px solid #fecaca;padding:12px;font-size:12px}
 .form-success{color:#155d39;background:#e6f4e9}
 @media(max-width:850px){.nav-links{background:var(--maroon);color:#fff;box-shadow:0 15px 20px #29252a30}.nav-links>a:not(.button){color:#fff;border-bottom-color:#ffffff35}.nav-links>a[aria-current=page]:not(.button){box-shadow:inset 3px 0 var(--yellow);padding-left:12px}.nav-links>a[href="/admissions"]{color:var(--maroon)}}
-.site-header .nav-links>a[href="/admissions"]:focus-visible,.site-header .mobile-header-actions .button:focus-visible,.button-light:focus-visible{outline:3px solid var(--maroon);outline-offset:3px;box-shadow:0 0 0 6px #fff}
+.site-header .nav-links>a[href="/admissions"]:focus-visible,.site-header .mobile-header-actions .button:focus-visible,.button-light:focus-visible{outline:3px solid #fff;outline-offset:4px;box-shadow:none}
 
 /* Keep the illustration ink independent from the interface palette. */
 .ill-book,.life-art .ill-book{color:var(--art-ink)}
 .brand-light .brand-mark{background:var(--yellow);color:var(--maroon)}
 .eyebrow,.hero-note,.learning-scribble small,.quick-links>span,.glance-note,.glance-stat>span,.glance-stat strong span,.contact-placeholders>span,.breadcrumbs li+li:before,.last-updated,.map-placeholder,.map-placeholder p,.calendar-empty p,.content-empty p,.calendar-list p{color:var(--body-copy)}
 .approval-pill,.sample-tag,.mini-label{background:#fff;color:var(--body-copy);border:1px solid var(--line)}
-.photo-caption,.info-number,.tone-1,.tone-2,.admission-note,.map-placeholder,thead th{background:#fff;color:var(--body-copy)}
-.admission-note>span{color:var(--maroon)}
+.photo-caption,.info-number,.tone-1,.tone-2,.map-placeholder,thead th{background:#fff;color:var(--body-copy)}
 .info-number{border:1px solid var(--line)}
+.footer p,.footer li,.footer dd{color:#e7eee4}
+
+.form-note{color:#1e40af;background:#eff6ff}
+.form-note .status-dot{background:#1e40af}
