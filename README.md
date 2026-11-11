@@ -1,6 +1,6 @@
-# Hakies Infant School website
+# Hakies Junior School website
 
-A responsive Next.js 16 App Router website for Hakies Infant School. The design uses CSS illustrations until approved school photographs are available. No pupil names or identifiable pupil photographs are included in the project.
+A responsive Next.js 16 App Router website for Hakies Junior School, using the school’s photographs and official crest artwork.
 
 ## Run locally
 
@@ -13,7 +13,7 @@ The app requires Node.js 20.9 or newer; `.nvmrc` selects Node 22. Keep Resend, N
 
 ## School content
 
-Edit confirmed school information in `src/data/school.ts`. Contact details, location, term dates, fees, admissions dates, illustrative counters, optional page visibility and the parent-facing review date are held there so each value is maintained once. Leave unknown values as `null`; the configured placeholder is shown in its place. Do not replace placeholders with guessed details.
+Edit confirmed school information in `src/data/school.ts`. Contact details, location, term dates, fees, illustrative counters, optional page visibility and the review date are held there so each value is maintained once. Leave unknown values as `null`; the configured placeholder is shown in its place. Do not replace placeholders with guessed details.
 
 The optional Staff, Facilities, Downloads, Testimonials and Careers pages are hidden from the navigation until the matching `school.pages` flag is set to `true`. Testimonials require explicit parent or guardian consent. Add approved PDF files to `public/downloads/`; the Downloads page lists them at build time.
 
@@ -49,11 +49,11 @@ The enquiry recipient is the confirmed `school.contact.email.value`. Until the r
 
 - Replace the contact, WhatsApp and office-hour placeholders with school-confirmed details.
 - Confirm the school address and coordinates; check the map and directions link.
-- Confirm term dates, event information, admissions steps, entry requirements, fees and key dates.
+- Confirm term dates, event information, fees and key dates before adding them to public pages.
 - Review all school copy, class information, school-day details and page content with the school.
 - Configure Resend, its verified sender, the school recipient email and Upstash Redis credentials; submit a test enquiry and confirm delivery.
 - Add only approved gallery images and PDFs. Confirm image captions, alt text and permission before deployment.
-- Review the parent-facing last-updated date and any optional pages; set navigation flags only when content is ready.
+- Review the contact-page last-updated date and any optional pages; set navigation flags only when content is ready.
 - Test mobile layout, keyboard access, reduced motion, contrast, form errors, map fallback and empty states.
 - Run `npm run test`, `npm run lint`, `npm run typecheck` and `npm run build`.
 - Capture Lighthouse mobile scores for Performance, Accessibility, Best Practices and SEO.

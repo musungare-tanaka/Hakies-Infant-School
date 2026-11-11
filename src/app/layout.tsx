@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(school.siteUrl),
   alternates: { canonical: '/' },
   title: { default: `${school.name} | A Happy Beginning to Learning`, template: `%s | ${school.name}` },
-  description: 'Learn about Hakies Infant School, see moments from school life and find contact details.',
+  description: 'Learn about Hakies Junior School, see moments from school life and find contact details.',
   openGraph: { title: school.name, description: school.headline, type: 'website', url: school.siteUrl, siteName: school.name },
   twitter: { card: 'summary', title: school.name, description: school.headline },
   robots: { index: isLaunch, follow: isLaunch, googleBot: { index: isLaunch, follow: isLaunch } },

@@ -1,7 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async redirects() {
-    return [{ source: '/admissions', destination: '/#contact', permanent: true }];
+    return [
+      { source: '/about', destination: '/#about', permanent: true },
+      { source: '/learning', destination: '/#learning', permanent: true },
+      { source: '/school-life', destination: '/#school-life', permanent: true },
+      { source: '/parents', destination: '/#contact', permanent: true },
+      { source: '/calendar', destination: '/#contact', permanent: true },
+      { source: '/news/:path*', destination: '/#contact', permanent: true },
+      { source: '/admissions', destination: '/#contact', permanent: true },
+    ];
   },
   async headers() {
     return [{

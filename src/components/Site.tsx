@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export function Header() {
   return <header className="site-header"><div className="nav-wrap">
-    <Link href="/" className="brand"><Image className="brand-logo" src="/tinified/logo.png" alt="" width={58} height={44} priority/><span>{school.name.replace(/ Infant School$/, '')} <small>INFANT SCHOOL</small></span></Link>
+    <Link href="/" className="brand"><Image className="brand-logo" src="/tinified/logo.png" alt="" width={58} height={44} priority/><span>{school.name}</span></Link>
     <Navigation />
   </div></header>;
 }

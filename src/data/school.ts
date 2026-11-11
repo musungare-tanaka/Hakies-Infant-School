@@ -28,7 +28,7 @@ type SchoolConfig = {
 };
 
 export const school: SchoolConfig = {
-  name: 'Hakies Infant School',
+  name: 'Hakies Junior School',
   siteUrl: 'https://hakies.vercel.app',
   headline: 'A Happy Beginning to a Lifetime of Learning',
   intro: 'Every school journey starts somewhere. We look forward to sharing more about our school, our community and the first steps in learning.',
@@ -59,9 +59,9 @@ export const school: SchoolConfig = {
     careers: false,
   },
   contentPages: {
-    staff: { title: 'Our staff', intro: 'Meet the team at Hakies Infant School when approved staff profiles are available.' },
+    staff: { title: 'Our staff', intro: 'Meet the team at Hakies Junior School.' },
     facilities: { title: 'Facilities', intro: 'Explore school facilities here once the school has provided confirmed information.' },
-    downloads: { title: 'Downloads', intro: 'Approved school documents provided by Hakies Infant School.' },
+    downloads: { title: 'Downloads', intro: 'School documents provided by Hakies Junior School.' },
     testimonials: { title: 'Testimonials', intro: 'Parent comments will only be shared here with consent.', consentNote: 'Testimonials require explicit permission from the parent or guardian before publication.' },
     careers: { title: 'Careers', intro: 'Career opportunities and application information will be listed here when confirmed.' },
   },
