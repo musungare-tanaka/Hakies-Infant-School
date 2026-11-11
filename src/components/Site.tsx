@@ -2,25 +2,37 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
-import { nav } from '@/lib/content';
 import { school } from '@/data/school';
+import Image from 'next/image';
 
 export function Header() {
-  const path = usePathname();
   return <header className="site-header"><div className="nav-wrap">
-    <Link href="/" className="brand"><span className="brand-mark" aria-hidden="true">h<span>✳</span></span><span>{school.name.replace(/ Infant School$/, '')} <small>INFANT SCHOOL</small></span></Link>
-    <div className="mobile-header-actions" aria-label="Quick actions"><Link href="/contact">Contact</Link><Link href="/calendar">Dates</Link><Link className="button button-small" href="/admissions">Apply</Link></div>
-    <Navigation key={path} path={path}/>
+    <Link href="/" className="brand"><Image className="brand-logo" src="/tinified/logo.png" alt="" width={58} height={44} priority/><span>{school.name.replace(/ Infant School$/, '')} <small>INFANT SCHOOL</small></span></Link>
+    <Navigation />
   </div></header>;
 }
 
-function Navigation({ path }: { path: string }) {
+function Navigation() {
+  const path = usePathname();
   const [open, setOpen] = useState(false);
+  const [active, setActive] = useState('home');
   const menuButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (path !== '/') return;
+    const sections = ['home', 'about', 'learning', 'school-life', 'contact'].map((id) => document.getElementById(id)).filter((node): node is HTMLElement => Boolean(node));
+    if (!sections.length) return;
+    const observer = new IntersectionObserver((entries) => {
+      const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+      if (visible) setActive(visible.target.id);
+    }, { rootMargin: '-18% 0px -62% 0px', threshold: [0, .2, .5, .8] });
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [path]);
   useEffect(() => { const onKeyDown = (event: KeyboardEvent) => { if (event.key === 'Escape' && open) { setOpen(false); menuButton.current?.focus(); } }; document.addEventListener('keydown', onKeyDown); return () => document.removeEventListener('keydown', onKeyDown); }, [open]);
   const close = () => setOpen(false);
+  const links = [{ label: 'Home', id: 'home' }, { label: 'About', id: 'about' }, { label: 'Learning', id: 'learning' }, { label: 'Gallery', id: 'school-life' }, { label: 'Contact', id: 'contact' }];
   return <><button ref={menuButton} className="menu-toggle" type="button" aria-expanded={open} aria-controls="main-nav" onClick={() => setOpen(!open)}><span>{open ? 'Close' : 'Menu'}</span><i aria-hidden="true">{open ? '×' : '☰'}</i></button>
-    <nav id="main-nav" className={open ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">{nav.map(item => <Link key={item.href} href={item.href} aria-current={path === item.href ? 'page' : undefined} onClick={close}>{item.label}</Link>)}<Link href="/contact" aria-current={path === '/contact' ? 'page' : undefined} onClick={close}>Contact</Link><Link href="/calendar" aria-current={path === '/calendar' ? 'page' : undefined} onClick={close}>Term Dates</Link><Link className="button button-small" href="/admissions" aria-current={path === '/admissions' ? 'page' : undefined} onClick={close}>Apply Now <span aria-hidden="true">↗</span></Link></nav></>;
+    <nav id="main-nav" className={open ? 'nav-links is-open' : 'nav-links'} aria-label="Main navigation">{links.map(item => <Link key={item.id} href={`/#${item.id}`} aria-current={path === '/' && active === item.id ? 'location' : undefined} onClick={close}>{item.label}</Link>)}</nav></>;
 }
 export function Reveal({ children, className = '' }: { children: React.ReactNode; className?: string }) {
  const ref = useRef<HTMLDivElement>(null);

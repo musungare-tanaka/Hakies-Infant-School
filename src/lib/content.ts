@@ -1,8 +1,8 @@
 import { school } from '@/data/school';
 
 const baseNav = [
-  { label: 'Home', href: '/' }, { label: 'About', href: '/about' }, { label: 'Learning', href: '/learning' },
-  { label: 'School Life', href: '/school-life' }, { label: 'Admissions', href: '/admissions' },
+  { label: 'Home', href: '/#home' }, { label: 'About', href: '/#about' }, { label: 'Learning', href: '/#learning' },
+  { label: 'School Life', href: '/#school-life' }, { label: 'Contact', href: '/#contact' },
 ];
 const optionalNav = [
   { label: 'Staff', href: '/staff', enabled: school.pages.staff },
@@ -22,7 +22,7 @@ export const pageCopy: Record<string, { eyebrow: string; title: string; intro: s
   ]},
   learning: { eyebrow: 'Curiosity starts here', title: 'Learning, one discovery at a time', intro: 'Explore how learning is organised at Hakies. Class names, age groups and curriculum details need to be confirmed by the school before publication.', sections: [
     { title: 'Our learning approach', text: 'This section is prepared for approved information about play, creativity, language, discovery and early development.', label: 'Provisional content · school approval needed' },
-    { title: 'Classes and age groups', text: 'Class names and age ranges will be added here when confirmed. Please contact the school for current admissions guidance.', label: 'Details to be confirmed' },
+    { title: 'Classes and age groups', text: 'Class names and age ranges will be added here when confirmed. Please contact the school for current information.', label: 'Details to be confirmed' },
     { title: 'Learning support', text: 'Add approved information about how the school works with families to support each child’s learning and development.', label: 'School information needed' },
   ]},
   'school-life': { eyebrow: 'Life at Hakies', title: 'Little moments, big memories', intro: 'A glimpse of the everyday experiences that make up school life, ready to be brought to life with approved photographs and stories.', sections: [

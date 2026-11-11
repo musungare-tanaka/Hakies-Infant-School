@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async redirects() {
+    return [{ source: '/admissions', destination: '/#contact', permanent: true }];
+  },
   async headers() {
     return [{
       source: '/:path*',

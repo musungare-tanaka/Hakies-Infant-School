@@ -16,7 +16,6 @@ type SchoolConfig = {
   events: { title: string; date: string | null; description?: string }[];
   classes: { name: SchoolFact<string>; ageRange: SchoolFact<string> }[];
   fees: { item: string; amount: string | null; notes?: string }[];
-  admissions: { steps: string[]; requirements: string[]; keyDates: { label: string; date: string | null }[] };
   counters: { label: string; value: number }[];
   pages: { staff: boolean; facilities: boolean; downloads: boolean; testimonials: boolean; careers: boolean };
   contentPages: {
@@ -47,11 +46,6 @@ export const school: SchoolConfig = {
   events: [],
   classes: [],
   fees: [],
-  admissions: {
-    steps: [],
-    requirements: ['Entry requirements to be confirmed by the school'],
-    keyDates: [],
-  },
   counters: [
     { label: 'Years of learning', value: 10 },
     { label: 'Ways to discover', value: 8 },
